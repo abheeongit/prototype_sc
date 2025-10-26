@@ -1,0 +1,23 @@
+.process-step {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.process-step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.process-step h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.process-step p {
+  font-size: 0.95rem;
+  color: #555;
+}
