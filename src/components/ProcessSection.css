@@ -1,37 +1,32 @@
 .process {
-  padding: 100px 10%;
   border-top: 2px solid #ff6a00;
   border-bottom: 2px solid #ff6a00;
   background: #111;
   color: #ccc;
+  padding: 80px 10%;
+  position: relative;
+  overflow: hidden;
 }
 
 .process h2 {
   color: #ff6a00;
-  margin-bottom: 2rem;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .steps {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
+  gap: 2rem;
 }
 
 .step {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
-  font-size: 1.2rem;
 }
 
-.gear-icon {
+.step-icon {
+  font-size: 2rem;
   color: #ff8c33;
-  animation: spin 6s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
