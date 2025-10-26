@@ -1,17 +1,23 @@
-.process-section {
-  padding: 4rem 2rem;
-  background: #eaeaea;
-  text-align: center;
-}
-
-.process-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-.process-steps {
+.steps {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step {
+  background: #2a2a2a;
+  padding: 25px;
+  border-radius: 12px;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 0 10px #ff6a00;
+  transition: all 0.3s;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff8c33;
 }

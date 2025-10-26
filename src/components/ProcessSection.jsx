@@ -1,21 +1,25 @@
 import React from 'react';
-import ProcessStep from './ProcessStep.jsx';
+import { motion } from 'framer-motion';
 import './ProcessSection.css';
 
-const steps = [
-  { id: 1, title: 'Design & Planning', description: 'We plan every barrel to perfection.' },
-  { id: 2, title: 'Material Selection', description: 'High-quality steel for durability.' },
-  { id: 3, title: 'Manufacturing', description: 'Precision engineering in every drum.' },
-  { id: 4, title: 'Quality Check', description: 'Ensuring top-notch standards.' },
-];
+const steps = ['Raw Material', 'Fabrication', 'Quality Testing', 'Packaging & Delivery'];
 
-function ProcessSection() {
+function ProcessSection({ id }) {
   return (
-    <section className="process-section">
+    <section className="process" id={id}>
       <h2>Our Process</h2>
-      <div className="process-steps">
-        {steps.map(step => (
-          <ProcessStep key={step.id} title={step.title} description={step.description} />
+      <div className="steps">
+        {steps.map((step, index) => (
+          <motion.div
+            key={index}
+            className="step"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+          >
+            {index + 1}. {step}
+          </motion.div>
         ))}
       </div>
     </section>

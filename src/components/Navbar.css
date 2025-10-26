@@ -1,0 +1,43 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(20,20,20,0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  z-index: 999;
+  box-shadow: 0 2px 15px rgba(255,106,0,0.3);
+}
+
+.navbar .logo {
+  font-weight: 700;
+  color: #ff6a00;
+  font-size: 1.5rem;
+}
+
+.navbar .links span {
+  margin-left: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.navbar .links span:hover,
+.navbar .links span.active {
+  color: #ff8c33;
+}
+
+.navbar .links span.active::after,
+.navbar .links span:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ff6a00;
+  bottom: -5px;
+  left: 0;
+  border-radius: 2px;
+}
