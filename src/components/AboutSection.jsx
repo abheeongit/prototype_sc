@@ -16,11 +16,21 @@ function AboutSection({ id }) {
     >
       <h2>About Us</h2>
       <div className="about-content">
-        <img src={aboutImage} alt="About SteelSync" />
-        <p>
+        <motion.img
+          src={aboutImage}
+          alt="About SteelSync"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        />
+        <motion.p
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           SteelSync specializes in industrial steel barrels and drums, crafted for durability
           and reliability across all industries. Our steel solutions are trusted worldwide.
-        </p>
+        </motion.p>
       </div>
     </motion.section>
   );

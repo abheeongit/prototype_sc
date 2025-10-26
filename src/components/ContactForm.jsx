@@ -13,12 +13,16 @@ function ContactForm({ id }) {
       transition={{ duration: 0.8 }}
     >
       <h2>Contact Us</h2>
-      <form>
+      <motion.form
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Email" required />
         <textarea placeholder="Message" required></textarea>
         <button type="submit">Send</button>
-      </form>
+      </motion.form>
     </motion.section>
   );
 }

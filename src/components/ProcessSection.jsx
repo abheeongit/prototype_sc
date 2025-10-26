@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaCog } from 'react-icons/fa';
 import './ProcessSection.css';
 
 const steps = ['Raw Material', 'Fabrication', 'Quality Testing', 'Packaging & Delivery'];
@@ -18,6 +19,7 @@ function ProcessSection({ id }) {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
+            <FaCog className="gear-icon" />
             {index + 1}. {step}
           </motion.div>
         ))}

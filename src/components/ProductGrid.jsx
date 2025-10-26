@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaCog } from 'react-icons/fa';
 import './ProductGrid.css';
 
 const products = [
@@ -24,7 +25,10 @@ function ProductGrid({ id }) {
             transition={{ duration: 0.6, delay: item.id * 0.2 }}
           >
             <img src={item.image} alt={item.name} />
-            <h3>{item.name}</h3>
+            <div className="product-name">
+              <FaCog className="gear-icon" />
+              <h3>{item.name}</h3>
+            </div>
           </motion.div>
         ))}
       </div>

@@ -1,23 +1,37 @@
+.process {
+  padding: 100px 10%;
+  border-top: 2px solid #ff6a00;
+  border-bottom: 2px solid #ff6a00;
+  background: #111;
+  color: #ccc;
+}
+
+.process h2 {
+  color: #ff6a00;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .steps {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .step {
-  background: #2a2a2a;
-  padding: 25px;
-  border-radius: 12px;
-  width: 200px;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  box-shadow: 0 0 10px #ff6a00;
-  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
 }
 
-.step:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px #ff8c33;
+.gear-icon {
+  color: #ff8c33;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

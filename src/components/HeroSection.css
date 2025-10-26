@@ -1,16 +1,48 @@
 .hero {
+  position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #0d0d0d, #333);
   text-align: center;
+  background: linear-gradient(135deg, #0d0d0d, #222);
+  overflow: hidden;
 }
 
-.hero h1 {
+.hero-sparks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-smoke {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, transparent 80%);
+  opacity: 0.1;
+  animation: smokeMove 60s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes smokeMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -2000px; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.glow-text {
   font-size: 4rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 10px #ff6a00;
+  color: #ff6a00;
+  text-shadow: 0 0 7px #ff6a00, 0 0 0px #ff8c33, 0 0 2px #ff6a00;
 }
 
 .hero p {
